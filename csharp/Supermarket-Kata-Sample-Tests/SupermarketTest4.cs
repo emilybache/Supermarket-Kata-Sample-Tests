@@ -19,17 +19,23 @@ namespace Supermarket_Kata_Sample_Tests
 
             IEnumerable<Discount> discounts = new[]
             {
-                new Discount {SKU = 'A', Quantity = 3, Value = 20},
-                new Discount {SKU = 'B', Quantity = 2, Value = 15}
+                new Discount {SKU = 'A', 
+                    Quantity = 3, 
+                    Value = 20},
+                new Discount {SKU = 'B', 
+                    Quantity = 2, 
+                    Value = 15}
             };
 
-            register = new CashRegister(products, discounts);
+            register = new CashRegister(products, 
+                discounts);
         }
 
         [Fact]
         public void No_items_returns_zero()
         {
-            Assert.Equal(0, register.Scan("").Total());
+            Assert.Equal(0, 
+                register.Scan("").Total());
         }
 
         [Theory]
@@ -44,7 +50,8 @@ namespace Supermarket_Kata_Sample_Tests
         [InlineData("BBBBACD", 175)]
         public void Scan_discounted_combinations_and_expect_correct_total(string scan, int expected)
         {
-            Assert.Equal(expected, register.Scan(scan).Total());
+            Assert.Equal(expected, 
+                register.Scan(scan).Total());
         }
     }
 }

@@ -26,7 +26,8 @@ namespace Supermarket_Kata_Sample_Tests
             Price = 50
         };
 
-        private readonly PricingRule ItemARule = new PricingRule
+        private readonly PricingRule ItemARule = 
+            new PricingRule
         {
             ItemName = "A",
             ItemCount = 3,

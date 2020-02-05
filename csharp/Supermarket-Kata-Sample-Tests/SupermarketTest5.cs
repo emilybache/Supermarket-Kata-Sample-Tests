@@ -11,7 +11,8 @@ namespace Supermarket_Kata_Sample_Tests
         Till till;
  
         public SupermarketTest5() {
-            till = new Till(new Dictionary<string, int> {
+            till = new Till(
+                new Dictionary<string, int> {
                 {"Apple", applePrice},
                 {"Banana", bananaPrice}
             });
@@ -22,7 +23,9 @@ namespace Supermarket_Kata_Sample_Tests
             till.Scan("Banana");
             till.Scan("Apple");
  
-            Assert.That(till.Total, Is.EqualTo(bananaPrice + applePrice));
+            Assert.That(till.Total, 
+                Is.EqualTo(bananaPrice + applePrice)
+                );
         }
     }
 }
