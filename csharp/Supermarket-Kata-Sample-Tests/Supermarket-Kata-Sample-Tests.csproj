@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="NHamcrest.XUnit" Version="2.0.1" />
       <PackageReference Include="xunit" Version="2.4.1" />
     </ItemGroup>
 

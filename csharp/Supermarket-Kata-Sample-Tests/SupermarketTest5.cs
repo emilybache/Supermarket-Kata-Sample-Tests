@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NHamcrest;
 using Xunit;
 
 namespace Supermarket_Kata_Sample_Tests
